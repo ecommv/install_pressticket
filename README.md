@@ -5,7 +5,7 @@
 sudo apt update && sudo apt upgrade -y
 
 #### INSTALAR O GIT E REPOSITÓRIO
-sudo apt install -y git && git clone https://github.com/geanmusica/install_pressticket.git instalador && sudo chmod -R 777 ./instalador && cd ./instalador && sudo ./install_primaria
+sudo apt install -y git && git clone https://github.com/ecommv/install_pressticket.git instalador && sudo chmod -R 777 ./instalador && cd ./instalador && sudo ./install_primaria
 
 #### INSERIR INFORMAÇÕES
 Ao executar o comando, vai aparecer um menu para instalar ou atualizar.
@@ -24,7 +24,7 @@ O acesso ao phpmyadmin é feito por IP do servidor, ex. http://111.111.111.111:8
 10. Porta do MYSQL, geralmente para a primeira instalação 3306, e a seguintes instalações que tiverem, 3307, 3308...
 
 #### CORRIGE O ERRO DE BUILD DO FRONTEND
-cd /home/deploy/NOMEDAEMPRESA/frontend/src && mv config.json.example config.jason && cd /home/deploy/NOMEDAEMPRESA/frontend/ && npm run build
+cd /home/deploy/NOMEDAEMPRESA/frontend/src && mv config.json.example config.json && cd /home/deploy/NOMEDAEMPRESA/frontend/ && npm run build
 
 #### INICIA OS SERVILOS NO PM2
 cd /home/deploy/NOMEDAEMPRESA/backend && pm2 start dist/server.js --name whaticket-backend && cd /home/deploy/NOMEDAEMPRESA/frontend && pm2 start server.js --name whaticket-frontend && pm2 save
